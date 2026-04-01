@@ -1,17 +1,17 @@
 {
 	"$schema": "../node_modules/@companion-module/base/assets/manifest.schema.json",
-	"id": "your-module-name",
-	"name": "your-module-name",
-	"shortname": "module-shortname",
-	"description": "A short one line description of your module",
-	"version": "0.0.0",
+	"id": "jeffwalden-testing",
+	"name": "Jeff Walden Testing",
+	"shortname": "test",
+	"description": "Test module for stuff",
+	"version": "0.1.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/companion-module-your-module-name.git",
-	"bugs": "https://github.com/bitfocus/companion-module-your-module-name/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-jeffwalden-testing.git",
+	"bugs": "https://github.com/bitfocus/companion-module-jeffwalden-testing/issues",
 	"maintainers": [
 		{
-			"name": "Your name",
-			"email": "Your email"
+			"name": "Jeff Walden",
+			"email": "jwalden@mit.edu"
 		}
 	],
 	"runtime": {
@@ -21,7 +21,7 @@
 		"entrypoint": "../dist/main.js"
 	},
 	"legacyIds": [],
-	"manufacturer": "Your company",
-	"products": ["Your product"],
+	"manufacturer": "Jeff Walden",
+	"products": ["Testing Module"],
 	"keywords": []
 }

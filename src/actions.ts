@@ -1,5 +1,13 @@
 import type { ModuleInstance } from './main.js'
 
+export type ModuleActions = {
+	sample_action: {
+		options: {
+			num: number
+		}
+	}
+}
+
 export function UpdateActions(self: ModuleInstance): void {
 	self.setActionDefinitions({
 		sample_action: {
