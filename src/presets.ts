@@ -21,7 +21,21 @@ export function UpdatePresets(self: ModuleInstance): void {
 					bgcolor: combineRgb(0, 0, 0),
 					show_topbar: false,
 				},
-				steps: [],
+				steps: [
+					{
+						down: [
+							{
+								actionId: 'sample_action',
+								options: { num: 42 },
+							},
+							{
+								actionId: 'return_value',
+								options: { 'val-to-return': 'hi!' },
+							},
+						],
+						up: [],
+					},
+				],
 				feedbacks: [],
 			},
 		},
