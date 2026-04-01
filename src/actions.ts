@@ -1,3 +1,4 @@
+import type { JsonValue } from '@companion-module/base'
 import type { ModuleInstance } from './main.js'
 
 export type ModuleActions = {
@@ -5,6 +6,12 @@ export type ModuleActions = {
 		options: {
 			num: number
 		}
+	}
+	return_value: {
+		options: {
+			'val-to-return': string
+		}
+		result: JsonValue
 	}
 }
 
@@ -24,6 +31,22 @@ export function UpdateActions(self: ModuleInstance): void {
 			],
 			callback: async (event) => {
 				console.log('Hello world!', event.options.num)
+			},
+		},
+		return_value: {
+			name: 'Return a value',
+			options: [
+				{
+					id: 'val-to-return',
+					type: 'textinput',
+					label: 'Enter a JSON string to return its parsed value',
+					default: 'null',
+					useVariables: true,
+				},
+			],
+			hasResult: true,
+			callback: ({ options }): JsonValue => {
+				return JSON.parse(options['val-to-return'])
 			},
 		},
 	})
