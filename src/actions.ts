@@ -13,6 +13,12 @@ export type ModuleActions = {
 		}
 		result: JsonValue
 	}
+	mdd: {
+		options: {
+			'mdd-field': (string | number)[]
+		}
+		result: JsonValue
+	}
 }
 
 export function UpdateActions(self: ModuleInstance): void {
@@ -47,6 +53,25 @@ export function UpdateActions(self: ModuleInstance): void {
 			hasResult: true,
 			callback: ({ options }): JsonValue => {
 				return JSON.parse(options['val-to-return'])
+			},
+		},
+		mdd: {
+			name: 'Return MDD value',
+			options: [
+				{
+					id: 'mdd-field',
+					type: 'multidropdown',
+					label: 'Select options',
+					default: [],
+					choices: [
+						{ label: 'A', id: 'a' },
+						{ label: '1', id: 1 },
+					],
+				},
+			],
+			hasResult: true,
+			callback: ({ options }): JsonValue => {
+				return options['mdd-field']
 			},
 		},
 	})
