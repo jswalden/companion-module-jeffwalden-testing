@@ -5,13 +5,13 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
-"@companion-module/base@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@companion-module/base@npm:2.1.0"
+"@companion-module/base@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@companion-module/base@npm:2.1.1"
   dependencies:
     colord: "npm:^2.9.3"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/b04cf278f22f714699d43286c1ffbeaf1860746f6034bddcc8c1ff198dc623d217926d3f49293aaae003346dfc401472735e6f2fdc740296cc0a05e360620ff0
+  checksum: 10c0/fc74d8fd5c91521c9560e50e831b57439135d9bf877f6c119981f7082c3cff4e83199425cf0d0274315172d6d85d99900bafb6c6b8fad22a08c39c778b13e816
   languageName: node
   linkType: hard
 
@@ -737,7 +737,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "companion-module-jeffwalden-testing@workspace:."
   dependencies:
-    "@companion-module/base": "npm:2.1.0"
+    "@companion-module/base": "npm:^2.1.1"
     "@companion-module/tools": "npm:^3.0.2"
     "@types/node": "npm:^22.19.17"
     eslint: "npm:^9.39.4"
